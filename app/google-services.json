@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "356436415167",
+    "project_id": "myfeeling-71173",
+    "storage_bucket": "myfeeling-71173.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356436415167:android:315f1bcba64f21b8afec0a",
+        "android_client_info": {
+          "package_name": "com.yurazhovnir.myfeeling"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbuML1Cic0r2Owf4bvi5VoP68-p8xcaaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

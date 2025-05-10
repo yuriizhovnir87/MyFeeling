@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mondayText"
+            style="@style/px13_med"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_icon_placeholder" />
+
+        <TextView
+            android:id="@+id/tuesdayText"
+            style="@style/px13_med"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_icon_placeholder" />
+
+        <TextView
+            android:id="@+id/wednesdayText"
+            style="@style/px13_med"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_icon_placeholder" />
+
+        <TextView
+            android:id="@+id/thursdayText"
+            style="@style/px13_med"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_icon_placeholder" />
+
+        <TextView
+            android:id="@+id/fridayText"
+            style="@style/px13_med"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_icon_placeholder" />
+
+        <TextView
+            android:id="@+id/saturdayText"
+            style="@style/px13_med"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_icon_placeholder" />
+
+        <TextView
+            android:id="@+id/sundayText"
+            style="@style/px13_med"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_icon_placeholder" />
+
+    </LinearLayout>
+</layout>

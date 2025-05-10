@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickable"
+            type="com.yurazhovnir.myfeeling.ui.AddFilingFragment" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#FFF8E1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/signIn"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="18dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/px36_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Myfeeliing"
+                android:textColor="@color/base_black" />
+
+            <TextView
+                style="@style/px17_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Choose your filing"
+                android:textColor="@color/base_black" />
+
+            <LinearLayout
+                android:id="@+id/emojiContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <TextView
+                style="@style/px17_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="Comment"
+                android:textColor="@color/base_black" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/commentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_grey_line"
+                android:gravity="start"
+                android:hint="Add your comment"
+                android:minHeight="100dp"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:id="@+id/mediaSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/addPhoto"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_add_photo" />
+
+                <ImageView
+                    android:id="@+id/addVoice"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_voice" />
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/googleHealthView"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="18dp"
+                android:onClick="@{()-> clickable.onConnectToGoogleHealthClick()}"
+                android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="#FF8A65"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="0dp">
+                <TextView
+                    android:text="Connect To Google Health"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/px17_bold"
+                    android:textColor="@color/base_white"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/signIn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="18dp"
+            android:onClick="@{()-> clickable.onSaveClick()}"
+            android:layout_marginEnd="6dp"
+            app:cardBackgroundColor="#FF8A65"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                style="@style/px15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Save "
+                android:textColor="@color/base_white" />
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</layout>

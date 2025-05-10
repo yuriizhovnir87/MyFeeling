@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="color_C4BEA6">#C4BEA6</color>
+    <color name="color_2597BE">#2597BE</color>
+    <color name="color_33634B">#33634B</color>
+    <color name="color_008152">#008152</color>
+    <color name="color_121213">#121213</color>
+    <color name="color_690ACF">#690ACF</color>
+    <color name="color_FCFCFC">#FCFCFC</color>
+
+    /** base **/
+    <color name="base_white">#FFFFFF</color>
+    <color name="base_black">#000000</color>
+
+    <color name="base_white_10">#26FFFFFF</color>
+    <color name="base_white_15">#26FFFFFF</color>
+    <color name="base_white_20">#33FFFFFF</color>
+    <color name="base_white_25">#40FFFFFF</color>
+    <color name="base_white_50">#80FFFFFF</color>
+    <color name="base_white_65">#A6FFFFFF</color>
+    <color name="base_white_75">#BFFFFFFF</color>
+    <color name="base_white_80">#CCFFFFFF</color>
+
+    <color name="base_black_15">#26000000</color>
+    <color name="base_black_20">#33000000</color>
+    <color name="base_black_50">#80000000</color>
+    <color name="base_black_65">#A6000000</color>
+    <color name="base_black_75">#BF000000</color>
+
+    /** background **/
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_primary_2">#05FFFFFF</color>
+    <color name="background_secondary">#F8F8FC</color>
+    <color name="background_brand_primary">#690ACF</color>
+    <color name="background_brand_secondary">#03B4C6</color>
+    <color name="background_brand_tertiary">#BF00FF</color>
+
+    /** surface **/
+    <color name="surface_primary">#F8F8FC</color>
+    <color name="surface_secondary">#F1F1F8</color>
+    <color name="surface_tertiary">#FFFFFF</color>
+    <color name="surface_tertiary_inverse">#000000</color>
+    <color name="surface_brand">#690ACF</color>
+    <color name="surface_brand_secondary">#03B4C6</color>
+    <color name="surface_brand_light">#F0E7FA</color>
+    <color name="surface_success">#36B927</color>
+    <color name="surface_warning">#F18805</color>
+    <color name="surface_danger">#F15025</color>
+
+    <color name="surface_tertiary_15">#26FFFFFF</color>
+    <color name="surface_tertiary_80">#CCFFFFFF</color>
+    <color name="surface_tertiary_90">#E6FFFFFF</color>
+
+    <color name="surface_brand_10">#1A690ACF</color>
+    <color name="surface_success_5">#0D36B927</color>
+
+    <color name="surface_tertiary_inverse_10">#1A000000</color>
+
+    /** text_icon **/
+    <color name="text_icon_primary">#121213</color>
+    <color name="text_icon_primary_20">#33121213</color>
+    <color name="text_icon_primary_inverse">#FFFFFF</color>
+    <color name="text_icon_secondary">#757579</color>
+    <color name="text_icon_placeholder">#A2A2A7</color>
+    <color name="text_icon_disabled">#CCCCD3</color>
+    <color name="text_icon_brand">#690ACF</color>
+    <color name="text_icon_accent">#03B4C6</color>
+    <color name="text_icon_tertiary">#BF00FF</color>
+    <color name="text_icon_success">#36B927</color>
+    <color name="text_icon_warning">#F18805</color>
+    <color name="text_icon_danger">#F15025</color>
+
+    <color name="text_icon_primary_50">#80121213</color>
+    <color name="text_icon_primary_75">#BF121213</color>
+    <color name="text_icon_primary_15">#26121213</color>
+
+    <color name="text_icon_primary_inverse_75">#BFFFFFFF</color>
+    <color name="text_icon_primary_inverse_65">#A6FFFFFF</color>
+    <color name="text_icon_primary_inverse_15">#26FFFFFF</color>
+
+    <color name="text_icon_secondary_50">#80757579</color>
+
+    /** border **/
+    <color name="border_primary">#F1F1F8</color>
+    <color name="border_secondary">#E4E4EC</color>
+    <color name="border_tertiary">#000000</color>
+    <color name="border_brand">#690ACF</color>
+    <color name="border_accent">#03B4C6</color>
+    <color name="border_success">#36B927</color>
+    <color name="border_success_5">#0D36B927</color>
+    <color name="border_warning">#F18805</color>
+    <color name="border_danger">#F15025</color>
+
+    <color name="border_secondary_70">#B3E4E4EC</color>
+    <color name="border_secondary_45">#73E4E4EC</color>
+    <color name="pastel_biege">#C4BEA6</color>
+</resources>
