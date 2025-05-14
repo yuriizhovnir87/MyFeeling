@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-android")
-    id("io.realm.kotlin") version "2.3.0"
+//    id("io.realm.kotlin") version "2.3.0"
     id("com.google.devtools.ksp")
     id("dagger.hilt.android.plugin")
     id("com.google.firebase.crashlytics")
@@ -96,7 +96,7 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
     ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.1")
 
-    implementation("io.realm.kotlin:library-base:2.3.0")
+//    implementation("io.realm.kotlin:library-base:2.3.0")
     implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
@@ -122,4 +122,10 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
 
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+
+    implementation ("androidx.room:room-runtime:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+
+    implementation ("androidx.room:room-ktx:2.6.1")
 }

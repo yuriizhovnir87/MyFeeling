@@ -1,18 +1,15 @@
 package com.yurazhovnir.myfeeling.model
 
-import io.realm.kotlin.types.RealmObject
-import io.realm.kotlin.types.annotations.PrimaryKey
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-class User : RealmObject {
-    @PrimaryKey
-    var id: Int = 0
-    var name: String? = ""
-
-    var email: String? = ""
-    var password: String? = ""
-    var subscribe: String? = ""
-
-    var startsReminderId: Int? = 0
-    var dueAt: String? = null
-        get() = field ?: ""
-}
+@Entity(tableName = "user")
+data class User(
+    @PrimaryKey val id: Int,
+    val name: String?,
+    val email: String?,
+    val password: String?,
+    val subscribe: String?,
+    val startsReminderId: Int?,
+    val dueAt: String?
+)

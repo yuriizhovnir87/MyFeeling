@@ -1,11 +1,15 @@
 package com.yurazhovnir.myfeeling.ui.main
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
+import androidx.room.Room
 import androidx.viewpager.widget.ViewPager
 import com.yurazhovnir.myfeeling.R
 import com.yurazhovnir.myfeeling.base.BaseActivity
 import com.yurazhovnir.myfeeling.base.ViewPagerAdapter
 import com.yurazhovnir.myfeeling.databinding.ActivityMainBinding
+import com.yurazhovnir.myfeeling.helper.AppDatabase
 import com.yurazhovnir.myfeeling.ui.Screens
 
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
@@ -15,7 +19,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         setupViewPager()
         setupBottomNavigation()
     }
-
     private fun setupViewPager() {
         viewPagerAdapter = ViewPagerAdapter(supportFragmentManager).apply {
             addFragment(Screens.getCalendarFragment())

@@ -16,8 +16,8 @@ class AnalyticFragment : BaseFragment<FragmentAnalyticBinding>(FragmentAnalyticB
     }
 
     fun onStepsClick() {
-        Screens.getAnalyticStepsFragment().let {
-            add(android.R.id.content, it)
-        }
+//        Screens.getAnalyticStepsFragment().let {
+//            add(android.R.id.content, it)
+//        }
     }
 }

@@ -16,26 +16,23 @@ import com.yurazhovnir.myfeeling.model.Filing
 import com.yurazhovnir.myfeeling.helper.HealthConnectManager
 import com.yurazhovnir.myfeeling.PERMISSIONS
 import com.yurazhovnir.myfeeling.databinding.FragmentAddFilingBinding
-import com.yurazhovnir.myfeeling.helper.DatabaseChangeListener
-import com.yurazhovnir.myfeeling.helper.DatabaseHelper
+import com.yurazhovnir.myfeeling.helper.AppDatabase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Date
 
-class AddFilingFragment : BaseFragment<FragmentAddFilingBinding>(FragmentAddFilingBinding::inflate), DatabaseChangeListener {
+class AddFilingFragment : BaseFragment<FragmentAddFilingBinding>(FragmentAddFilingBinding::inflate){
     override val TAG: String
         get() = "AddFilingFragment"
     private var emoji: String = ""
     private lateinit var healthConnectManager: HealthConnectManager
-    private lateinit var databaseHelper: DatabaseHelper
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.clickable = this
-        databaseHelper = DatabaseHelper(requireContext())
-        databaseHelper.addDatabaseChangeListener(this)
-
         healthConnectManager = HealthConnectManager(requireContext())
 
         setupEmojiSelector()
@@ -43,25 +40,20 @@ class AddFilingFragment : BaseFragment<FragmentAddFilingBinding>(FragmentAddFili
 
     fun onSaveClick() {
         lifecycleScope.launch {
-            val newFil = Filing()
+
             val current = LocalDateTime.now()
-            newFil.startsAt = current.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
-            newFil.dueAt = current.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
-            newFil.id = Date().time.toInt()
-            newFil.comment = binding.commentView.text?.toString()
-            newFil.emoji = emoji
-            if (healthConnectManager.checkAndRequestPermissions()) {
-                val summary = healthConnectManager.getDailyBiometricSummary()
-                newFil.steps = summary.steps
-                newFil.hydration = summary.hydration
-                newFil.sleep = summary.sleepHours?.toInt()
-                val dbHelper = DatabaseHelper(requireContext())
-                dbHelper.insertFiling(newFil)
-//                activity?.onBackPressed()
-            } else {
-                val dbHelper = DatabaseHelper(requireContext())
-                dbHelper.insertFiling(newFil)
-//                activity?.onBackPressed()
+            val newFil = Filing(
+                startsAt = current.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                dueAt = current.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                id = Date().time.toInt(),
+                comment = binding.commentView.text?.toString(),
+                emoji = emoji
+            )
+            val db = AppDatabase.getDatabase(requireContext())
+            val filingDao = db.filingDao()
+
+            withContext(Dispatchers.IO) {
+                filingDao.insertFiling(newFil)
             }
         }
     }
@@ -126,10 +118,5 @@ class AddFilingFragment : BaseFragment<FragmentAddFilingBinding>(FragmentAddFili
                 binding.googleHealthView.isVisible = false
             }
         }
-    }
-
-    override fun onDataChanged() {
-      val ttest  = databaseHelper.getAllFilings()
-        ttest
     }
 }
